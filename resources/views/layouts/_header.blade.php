@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
   <div class="container">
     <!-- Branding Image -->
-    <a class="navbar-brand " href="{{ url('/') }}">
-    京都传统匠人产品购买意向问卷调查
+    <a class="navbar-brand " href="{{ url('#') }}">
+    机构名称
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
