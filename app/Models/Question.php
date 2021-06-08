@@ -13,4 +13,11 @@ class Question extends Model
     protected $fillable = [
 
     ];
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+    public function answers(){
+        return $this->hasMany(Answer::class);
+    }
 }

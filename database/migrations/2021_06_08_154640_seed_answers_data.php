@@ -43,7 +43,135 @@ class SeedAnswersData extends Migration
                 'question_id' => 2,
             ],
             [
-                'answer_content'        => '地址',
+                'answer_content'        => '安徽',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '北京',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '重庆',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '福建',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '甘肃',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '广东',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '广西',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '贵州',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '海南',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '河北',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '河南',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '黑龙江',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '湖北',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '湖南',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '吉林',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '江苏',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '江西',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '辽宁',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '内蒙古',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '宁夏',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '青海',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '山东',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '山西',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '陕西',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '上海',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '四川',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '天津',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '西藏',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '新疆',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '云南',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '浙江',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '港/澳/台',
+                'question_id' => 3,
+            ],
+            [
+                'answer_content'        => '海外',
                 'question_id' => 3,
             ],
             [
