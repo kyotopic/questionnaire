@@ -44,12 +44,11 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color:mintcream;
-
+  background-color:rgba(42, 42, 42, 0.1);
+  margin-top: 50px;
   .container {
     padding-right: 15px;
     padding-left: 15px;
-
     p {
       margin: 19px 0;
       color: #c1c1c1;
@@ -59,4 +58,42 @@ body {
       }
     }
   }
+}
+
+.container {
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .check-box {
+    margin-left: 30px;
+    margin-top: 2px;
+  }
+  .form-check-label {
+    font-size: 17px;
+  }
+  .check-input {
+    margin: 0 0 0 17px;
+    padding: 0;
+  }
+  .form-margin {
+    margin: 0 0 0 5px;
+  }
+  .form-group {
+    margin: 2px 0 0 30px;
+  }
+  .row-margin {
+    margin-top: 10px;
+  }
+  .input-margin {
+    margin-left: 30px;
+  }
+  .form-submit {
+    margin: 30px 0 30px 0;
+  }
+}
+
+/* Add container and footer space */
+#app > div.container {
+  margin-bottom: 100px;
 }

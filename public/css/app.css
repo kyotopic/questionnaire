@@ -16164,7 +16164,8 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: mintcream;
+  background-color: rgba(42, 42, 42, 0.1);
+  margin-top: 50px;
 }
 .footer .container {
   padding-right: 15px;
@@ -16176,4 +16177,40 @@ body {
 }
 .footer .container p a {
   color: inherit;
+}
+
+.container p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.container .check-box {
+  margin-left: 30px;
+  margin-top: 2px;
+}
+.container .form-check-label {
+  font-size: 17px;
+}
+.container .check-input {
+  margin: 0 0 0 17px;
+  padding: 0;
+}
+.container .form-margin {
+  margin: 0 0 0 5px;
+}
+.container .form-group {
+  margin: 2px 0 0 30px;
+}
+.container .row-margin {
+  margin-top: 10px;
+}
+.container .input-margin {
+  margin-left: 30px;
+}
+.container .form-submit {
+  margin: 30px 0 30px 0;
+}
+
+/* Add container and footer space */
+#app > div.container {
+  margin-bottom: 100px;
 }
