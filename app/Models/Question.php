@@ -20,4 +20,7 @@ class Question extends Model
     public function answers(){
         return $this->hasMany(Answer::class);
     }
+    public function priceforquestions(){
+        return $this->hasMany(Priceforquestion::class);
+    }
 }

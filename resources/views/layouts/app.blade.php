@@ -37,22 +37,22 @@
     <script>
     $(document).ready(function() {
         var id;
-        $("#imagescheckcups a").bind("click", function() {
+        $("#coffee_cup a").bind("click", function() {
             id = $(this).children("input").attr("id");
         });
-        $("#imagescheckteapots a").bind("click", function() {
+        $("#teapot a").bind("click", function() {
             id = $(this).children("input").attr("id");
         });
-        $("#imagescheckceramics a").bind("click", function() {
+        $("#ceramic_cup a").bind("click", function() {
             id = $(this).children("input").attr("id");
         });
-        $("#imageschecksilver a").bind("click", function() {
+        $("#silver_product a").bind("click", function() {
             id = $(this).children("input").attr("id");
         });
-        $("#imagescheckweave a").bind("click", function() {
+        $("#textile a").bind("click", function() {
             id = $(this).children("input").attr("id");
         });
-        $("#imagescheckpaint a").bind("click", function() {
+        $("#lacquer a").bind("click", function() {
             id = $(this).children("input").attr("id");
         });
 

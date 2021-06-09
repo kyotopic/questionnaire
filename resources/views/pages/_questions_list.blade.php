@@ -1,7 +1,8 @@
 @if($questions->count() > 0)
 @foreach($questions as $question)
-
-
+@if($question->id>8 && $question->id < 15)
+<div id="{{ $question->name }}">
+@endif
 <div class="row">
     <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
         <p>
@@ -87,7 +88,7 @@
         <div class="form-group form-check-inline" id="image-click-div">
             @endif
             <div class="col-lg-3 col-md-3 hidden-sm hidden-xs text-center">
-                <a class="images-checkbox" href="" data-toggle="modal" data-target="#price3001200">
+                <a class="images-checkbox" href="" data-toggle="modal" data-target="#{{$question->priceforquestions[0]->name}}">
                     <label for="{{ $question->name }}{{ $answer->id }}">
                         <image class="img-fluid" src="/images/{{ $answer->question_id }}/{{ $count }}.jpg">
                     </label>
@@ -105,7 +106,7 @@
         <div class="form-group form-check-inline" id="image-click-div">
             @endif
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs text-center">
-                <a class="images-checkbox" href="" data-toggle="modal" data-target="#price3001200">
+                <a class="images-checkbox" href="" data-toggle="modal" data-target="#{{$question->priceforquestions[0]->name}}">
                     <label for="{{ $question->name }}{{ $answer->id }}">
                         <image class="img-fluid" src="/images/{{ $answer->question_id }}/{{ $count }}.jpg">
                     </label>
@@ -143,6 +144,9 @@
         @endif
     </div>
 </div>
+@if($question->id>8 && $question->id < 15)
+</div>
+@endif
 @endforeach
 
 
