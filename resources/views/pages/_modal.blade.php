@@ -138,6 +138,3 @@
         </div>
     </div>
 </div>
-<div class="row justify-content-md-center form-submit">
-    <input type="submit" class="btn btn-primary btn-lg" value="提交问卷">
-</div>

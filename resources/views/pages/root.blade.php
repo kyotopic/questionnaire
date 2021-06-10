@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('title', '首页')
+@section('title', '问卷')
 
 @section('content')
 
 <div class="container">
-    <h2 class="text-center">关于京都传统匠人产品购买意向的问卷调查</h1>
+    <h2 class="text-center">关于京都传统匠人产品购买意向的问卷调查</h2>
         <div class="row justify-content-md-center">
             <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
                 <p class="">
