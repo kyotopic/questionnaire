@@ -84,32 +84,7 @@
               $count=1;
             ?>
 
-<!-- <div class="modal fade" id="price3001200" tabindex="-1" role="dialog" aria-labelledby="price3001200ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="price3001200ModalLabel">您能接受的售价范围(人民币)</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-check check-box">
-                    <input class="form-check-input" type="radio" name="price3001200" id="price30012001" value="300"
-                    checked>
-                    <label class="form-check-label form-margin" for="price30012001">
-                        ~300元
-                    </label>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="close1" class="btn btn-secondary">取消</button>
-                <button type="button" id="save1" class="btn btn-primary">确定</button>
-            </div>
-        </div>
-    </div>
-</div> -->
+
 
 
 
