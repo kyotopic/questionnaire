@@ -13,27 +13,8 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
-</head>
-
-<body>
-    <div id="app" class="{{ route_class() }}-page">
-
-        @include('layouts._header')
-
-        <div class="container">
-
-            @include('shared._messages')
-
-            @yield('content')
-
-        </div>
-
-        @include('layouts._footer')
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ mix('js/app.js') }}"></script>
     <script>
     $(document).ready(function() {
         var id;
@@ -118,6 +99,25 @@
         document.cookie = "width="+width;
     });
     </script>
+</head>
+
+<body>
+    <div id="app" class="{{ route_class() }}-page">
+
+        @include('layouts._header')
+
+        <div class="container">
+
+            @include('shared._messages')
+
+            @yield('content')
+
+        </div>
+
+        @include('layouts._footer')
+    </div>
+
+
 </body>
 
 </html>
