@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="container">
-    <h2 class="text-center">关于京都传统匠人产品购买意向的问卷调查</h2>
+    <h3 class="text-center">关于京都传统匠人产品购买意向的问卷调查</h3>
         <div class="row justify-content-md-center">
             <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
                 <p class="">
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="row justify-content-md-center">
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-m">
+            <div class="col-lg-4 col-md-4 col-sm-auto text-center">
                 <p>
                     手作黄交趾浅口碗(一对 2 只) 1 位
                     <br>
@@ -23,12 +23,12 @@
                     <br>
                     清水烧陶艺家高岛慎一作品
                 </p>
-                <image class="img-fluid" src="/images/prize/prize1.png">
+                <img class="img-fluid" src="/images/prize/prize1.png">
             </div>
-            <div class="col-lg-3 col-md-3 hidden-sm hidden-m">
+            <div class="col-lg-3 col-md-3 col-sm-1 ">
                 <p>&nbsp;</p>
             </div>
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-m">
+            <div class="col-lg-4 col-md-4 col-sm-auto text-center">
                 <p>
                     手绘京漆器挂坠 5 位
                     <br>

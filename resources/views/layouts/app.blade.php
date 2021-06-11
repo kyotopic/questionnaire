@@ -111,10 +111,11 @@
         });
 
         var width = $(window).width();
-        if(width < 561){
-          $(".form-image-check").removeClass("form-check-inline");
-        }
-
+        // if(width < 561){
+        //   $(".form-image-check").removeClass("form-check-inline");
+        // }
+        //sessionStorage.setItem("width",width);
+        document.cookie = "width="+width;
     });
     </script>
 </body>

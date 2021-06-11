@@ -16181,24 +16181,24 @@ body {
 
 .container p {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 17px;
 }
 .container .check-box {
   margin-left: 30px;
   margin-top: 2px;
 }
 .container .form-check-label {
-  font-size: 17px;
+  font-size: 14px;
 }
 .container .check-input {
-  margin: 0 0 0 17px;
+  margin: 0 0 0 14px;
   padding: 0;
 }
 .container .form-margin {
   margin: 0 0 0 5px;
 }
 .container .form-group {
-  margin: 2px 0 0 30px;
+  margin: 2px 0 2px 30px;
 }
 .container .row-margin {
   margin-top: 10px;
