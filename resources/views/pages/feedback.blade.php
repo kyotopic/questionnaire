@@ -4,12 +4,11 @@
 @section('content')
 
 <div class="container">
-    @include('shared._messages')
     <h2 class="text-center">关于京都传统匠人产品购买意向的问卷调查</h2>
     <div class="row justify-content-md-center">
         <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
             <p class="text-center">
-                您的问卷已成功提交。<br>
+                <br>
                 我们将于北京时间6月18日（五）20:00，通过“偏爱京都”公众号发布中奖信息。<br>
                 如您希望参与抽奖，请确认您已填写正确的姓名及电话号码。<br>
                 如您尚未关注我们的公众号，可搜索“偏爱京都”拼音或扫描下方二维码添加。<br>

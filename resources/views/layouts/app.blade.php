@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Questionnaire') - Questionnaire 传统艺人商品购买意向问卷</title>
+    <title>@yield('title', 'Questionnaire') - 偏爱京都</title>
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -56,30 +56,64 @@
             id = $(this).children("input").attr("id");
         });
 
-        $("#save1").click(function() {
-            $("#price3001200").modal('hide');
+        $("#coffee_cupsave").click(function() {
+            $("#coffee_cup1").modal('hide');
             $("#" + id + "").attr("checked", true);
         });
-        $("#close1").click(function() {
-            $("#price3001200").modal('hide');
+        $("#coffee_cupclose").click(function() {
+            $("#coffee_cup1").modal('hide');
             $("#" + id + "").attr("checked", false);
         });
-        $("#save2").click(function() {
-            $("#price6002400").modal('hide');
+
+        $("#teapotsave").click(function() {
+            $("#teapot1").modal('hide');
             $("#" + id + "").attr("checked", true);
         });
-        $("#close2").click(function() {
-            $("#price6002400").modal('hide');
+        $("#teapotclose").click(function() {
+            $("#teapot1").modal('hide');
             $("#" + id + "").attr("checked", false);
         });
-        $("#save3").click(function() {
-            $("#price500030000").modal('hide');
+
+        $("#ceramic_cupsave").click(function() {
+            $("#ceramic_cup1").modal('hide');
             $("#" + id + "").attr("checked", true);
         });
-        $("#close3").click(function() {
-            $("#price500030000").modal('hide');
+        $("#ceramic_cupclose").click(function() {
+            $("#ceramic_cup1").modal('hide');
             $("#" + id + "").attr("checked", false);
         });
+
+        $("#silver_productsave").click(function() {
+            $("#silver_product1").modal('hide');
+            $("#" + id + "").attr("checked", true);
+        });
+        $("#silver_productclose").click(function() {
+            $("#silver_product1").modal('hide');
+            $("#" + id + "").attr("checked", false);
+        });
+
+        $("#textilesave").click(function() {
+            $("#textile1").modal('hide');
+            $("#" + id + "").attr("checked", true);
+        });
+        $("#textileclose").click(function() {
+            $("#textile1").modal('hide');
+            $("#" + id + "").attr("checked", false);
+        });
+
+        $("#lacquersave").click(function() {
+            $("#lacquer1").modal('hide');
+            $("#" + id + "").attr("checked", true);
+        });
+        $("#lacquerclose").click(function() {
+            $("#lacquer1").modal('hide');
+            $("#" + id + "").attr("checked", false);
+        });
+
+        var width = $(window).width();
+        if(width < 561){
+          $(".form-image-check").removeClass("form-check-inline");
+        }
 
     });
     </script>

@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@root')->name('root');
-Route::view('/feedback','pages.feedback');
 
+Route::post('submit', 'PagesController@store')->name('submit');
+Route::view('feedback','pages.feedback')->name('feedback');

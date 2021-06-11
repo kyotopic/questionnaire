@@ -55,10 +55,6 @@
         </div>
         {{-- 问题列表 --}}
         @include('pages._questions_list')
-        {{--@include('pages.code')--}}
-
-        {{-- 弹出框 --}}
-        @include('pages._modal')
 
 
 </div>
