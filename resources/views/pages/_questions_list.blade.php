@@ -1,4 +1,5 @@
 <?php
+  $width = 1000;
   $width = (int)$_COOKIE['width'];
 ?>
 @include('shared._error')
