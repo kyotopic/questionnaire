@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row justify-content-md-center">
-        <div class="col-lg-4 col-md-4 hidden-sm hidden-m">
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-m text-center">
             <p class="text-center">
                 偏爱京都公众号二维码
             </p>
@@ -26,7 +26,7 @@
         <div class="col-lg-2 col-md-2 hidden-sm hidden-m">
             <p>&nbsp;</p>
         </div>
-        <div class="col-lg-4 col-md-4 hidden-sm hidden-m">
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-m text-center">
             <p class="text-center">
                 偏爱京都网站二维码
             </p>

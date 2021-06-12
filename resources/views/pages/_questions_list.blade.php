@@ -105,7 +105,7 @@
                                         id="{{$question->name}}{{$price->id}}1" value="{{$price->id}}">
                                     <label class="form-check-label form-margin"
                                         for="{{$question->name}}{{$price->id}}1">@if($price->price % 2 == 0
-                                        )~{{$price->price}}元@else{{$price->price-1}}以上元@endif
+                                        )~{{$price->price}}元@else{{$price->price-1}}元以上@endif
                                     </label>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                     <image class="img-fluid" src="/images/{{ $answer->question_id }}/{{ $count }}.jpg">
                                 </label>
                                 <input class="form-check-input" type="checkbox" name="{{ $question->name }}[]"
-                                    id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                                    id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" >
                             </a>
                         </div>
                         @if($width < 560) @if( $count==2 || $count==4 || $count==6 || $count==8) </div>
@@ -156,7 +156,7 @@
                                             src="/images/{{ $answer->question_id }}/{{ $count }}.jpg">
                                     </label>
                                     <input class="form-check-input" type="checkbox" name="{{ $question->name }}[]"
-                                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" οnclick="Count_selected()">
                                 </a>
                             </div>
 
