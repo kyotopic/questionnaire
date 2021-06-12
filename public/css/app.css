@@ -16181,14 +16181,14 @@ body {
 
 .container p {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 14px;
 }
 .container .check-box {
   margin-left: 30px;
   margin-top: 2px;
 }
 .container .form-check-label {
-  font-size: 14px;
+  font-size: 12px;
 }
 .container .check-input {
   margin: 0 0 0 14px;

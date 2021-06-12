@@ -49,6 +49,7 @@
                 if (coffee_cup_count < 3) {
                     $("#coffee_cup1").modal('hide');
                     $("#" + id + "").prop("checked", true);
+                    $("#" + id + "").attr("checked", true);
                     coffee_cup_count++;
                 } else
                     alert("您最多可以选择三个选项，请不要再继续选择");
@@ -63,6 +64,7 @@
             } else if (coffee_cup_count > 0) {
                 $("#coffee_cup1").modal('hide');
                 $("#" + id + "").prop("checked", false);
+                $("#" + id + "").attr("checked", false);
                 coffee_cup_count--;
             }
         });
@@ -72,6 +74,7 @@
                 if (teapot_count < 3) {
                     $("#teapot1").modal('hide');
                     $("#" + id + "").prop("checked", true);
+                    $("#" + id + "").attr("checked", true);
                     teapot_count++;
                 } else
                     alert("您最多可以选择三个选项，请不要再继续选择");
@@ -86,6 +89,7 @@
             } else if (teapot_count > 0) {
                 $("#teapot1").modal('hide');
                 $("#" + id + "").prop("checked", false);
+                $("#" + id + "").attr("checked", false);
                 teapot_count--;
             }
         });
@@ -95,6 +99,7 @@
                 if (ceramic_cup_count < 3) {
                     $("#ceramic_cup1").modal('hide');
                     $("#" + id + "").prop("checked", true);
+                    $("#" + id + "").attr("checked", true);
                     ceramic_cup_count++;
                 } else
                     alert("您最多可以选择三个选项，请不要再继续选择");
@@ -109,6 +114,7 @@
             } else if (ceramic_cup_count > 0) {
                 $("#ceramic_cup1").modal('hide');
                 $("#" + id + "").prop("checked", false);
+                $("#" + id + "").attr("checked", false);
                 ceramic_cup_count--;
             }
         });
@@ -118,6 +124,7 @@
                 if (silver_product_count < 3) {
                     $("#silver_product1").modal('hide');
                     $("#" + id + "").prop("checked", true);
+                    $("#" + id + "").attr("checked", true);
                     silver_product_count++;
                 } else
                     alert("您最多可以选择三个选项，请不要再继续选择");
@@ -132,6 +139,7 @@
             } else if (silver_product_count > 0) {
                 $("#silver_product1").modal('hide');
                 $("#" + id + "").prop("checked", false);
+                $("#" + id + "").attr("checked", false);
                 silver_product_count--;
             }
         });
@@ -141,6 +149,7 @@
                 if (textile_count < 3) {
                     $("#textile1").modal('hide');
                     $("#" + id + "").prop("checked", true);
+                    $("#" + id + "").attr("checked", true);
                     textile_count++;
                 } else
                     alert("您最多可以选择三个选项，请不要再继续选择");
@@ -155,6 +164,7 @@
             } else if (textile_count > 0) {
                 $("#textile1").modal('hide');
                 $("#" + id + "").prop("checked", false);
+                $("#" + id + "").attr("checked", false);
                 textile_count--;
             }
         });
@@ -164,6 +174,7 @@
                 if (lacquer_count < 3) {
                     $("#lacquer1").modal('hide');
                     $("#" + id + "").prop("checked", true);
+                    $("#" + id + "").attr("checked", true);
                     lacquer_count++;
                 } else
                     alert("您最多可以选择三个选项，请不要再继续选择");
@@ -178,6 +189,7 @@
             } else if (lacquer_count > 0) {
                 $("#lacquer1").modal('hide');
                 $("#" + id + "").prop("checked", false);
+                $("#" + id + "").attr("checked", false);
                 lacquer_count--;
             }
         });
