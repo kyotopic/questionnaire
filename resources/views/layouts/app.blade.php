@@ -13,8 +13,8 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-<!-- Scripts -->
-<script src="{{ mix('js/app.js') }}"></script>
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}"></script>
     <script>
     $(document).ready(function() {
         var id;
@@ -96,7 +96,12 @@
         //   $(".form-image-check").removeClass("form-check-inline");
         // }
         //sessionStorage.setItem("width",width);
-        document.cookie = "width="+width;
+        document.cookie = "width=" + width;
+
+        if ($("#infobtn").length > 0) {
+          $("#infobtn").trigger("click");
+        }
+
     });
     </script>
 </head>

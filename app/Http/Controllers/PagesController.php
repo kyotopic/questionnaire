@@ -11,8 +11,12 @@ class PagesController extends Controller
 {
     public function root()
     {
+        return view('pages.root');
+    }
+    public function index()
+    {
         $questions = Question::all();
-        return view('pages.root', compact('questions'));
+        return view('pages.index', compact('questions'));
     }
 
     public function store(Request $request){
