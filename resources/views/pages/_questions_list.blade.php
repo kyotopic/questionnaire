@@ -25,7 +25,7 @@
                 @foreach( $question->answers as $answer)
                 <div class="form-check check-box">
                     <input class="form-check-input" type="radio" name="{{ $question->name }}"
-                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" {{ old( $question->name ) == $answer->id  ? "checked" : "" }} >
                     <label class="form-check-label form-margin" for="{{ $question->name }}{{ $answer->id }}">
                         {{ $answer->answer_content }}
                     </label>
@@ -37,7 +37,7 @@
                     <select class="form-control" name="{{ $question->name }}" required>
                         <option value="" hidden disabled selected>请选择地址</option>
                         @foreach( $question->answers as $answer)
-                        <option value="{{ $answer->id }}">{{ $answer->answer_content }}</option>
+                        <option value="{{ $answer->id }}"  {{ old( $question->name ) == $answer->id  ? "selected" : "" }}>{{ $answer->answer_content }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -46,7 +46,8 @@
                 @if( $answer->answer_content !== '其他' )
                 <div class="form-check check-box">
                     <input class="form-check-input" type="checkbox" name="{{ $question->name }}[]"
-                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" {{ old($question->name)&&in_array($answer->id,old($question->name)) ? "checked" : "" }}>
+
                     <label class="form-check-label form-margin" for="{{ $question->name }}{{ $answer->id }}">
                         {{ $answer->answer_content }}
                     </label>
@@ -54,10 +55,10 @@
                 @else
                 <div class="form-check check-box">
                     <input class="form-check-input" type="checkbox" name="{{ $question->name }}[]"
-                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" {{ old($question->name)&&in_array($answer->id,old($question->name)) ? "checked" : "" }} >
                     <label class="form-check-label form-margin" for="{{ $question->name }}{{ $answer->id }}">
-                        <input type="text" class="form-control form-control-sm form-margin"
-                            aria-label="Text input with checkbox" placeholder="{{ $answer->answer_content }}">
+                        <input name="question_{{ $question->id }}" type="text" class="form-control form-control-sm form-margin"
+                            aria-label="Text input with checkbox" placeholder="{{ $answer->answer_content }}" value="{{ old('question_'.$question->id) }}">
                     </label>
                 </div>
                 @endif
@@ -67,7 +68,7 @@
                 @if( $answer->answer_content !== '其他' )
                 <div class="form-check check-box">
                     <input class="form-check-input" type="radio" name="{{ $question->name }}"
-                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" {{ old( $question->name ) == $answer->id  ? "checked" : "" }} >
                     <label class="form-check-label form-margin" for="{{ $question->name }}{{ $answer->id }}">
                         {{ $answer->answer_content }}
                     </label>
@@ -75,10 +76,10 @@
                 @else
                 <div class="form-check check-box">
                     <input class="form-check-input" type="radio" name="{{ $question->name }}"
-                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}">
+                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" {{ old( $question->name ) == $answer->id  ? "checked" : "" }} >
                     <label class="form-check-label form-margin" for="{{ $question->name }}{{ $answer->id }}">
-                        <input type="text" class="form-control form-control-sm form-margin"
-                            aria-label="Text input with checkbox" placeholder="{{ $answer->answer_content }}">
+                        <input name="question_{{ $question->id }}" type="text" class="form-control form-control-sm form-margin"
+                            aria-label="Text input with checkbox" placeholder="{{ $answer->answer_content }}" value="{{ old('question_'.$question->id) }}">
                     </label>
                 </div>
                 @endif
@@ -132,7 +133,7 @@
                                     <image class="img-fluid" src="/images/{{ $answer->question_id }}/{{ $count }}.jpg">
                                 </label>
                                 <input class="form-check-input" type="checkbox" name="{{ $question->name }}[]"
-                                    id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" >
+                                    id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" {{ old($question->name)&&in_array($answer->id,old($question->name)) ? "checked" : "" }}>
                             </a>
                         </div>
                         @if($width < 560) @if( $count==2 || $count==4 || $count==6 || $count==8) </div>
@@ -156,7 +157,7 @@
                                             src="/images/{{ $answer->question_id }}/{{ $count }}.jpg">
                                     </label>
                                     <input class="form-check-input" type="checkbox" name="{{ $question->name }}[]"
-                                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}" οnclick="Count_selected()">
+                                        id="{{ $question->name }}{{ $answer->id }}" value="{{ $answer->id }}"  {{ old($question->name)&&in_array($answer->id,old($question->name)) ? "checked" : "" }}>
                                 </a>
                             </div>
 
@@ -179,14 +180,14 @@
                         @foreach( $question->answers as $answer)
                         @if( $question->id == 17 )
                         <p class="input-margin">
-                            <input class="form-input" type="text" name="{{ $question->name }}" placeholder="姓名或全称">
+                            <input class="form-input" type="text" name="{{ $question->name }}" placeholder="姓名或全称" value="{{ old($question->name) }}">
                             <br>
                             小姐/女士/先生(抽奖使用)
                         </p>
                         @endif
                         @if( $question->id == 18 )
                         <p class="input-margin">
-                            <input class="form-input" type="text" name="{{ $question->name }}" placeholder="手机号11 位">
+                            <input class="form-input" type="text" name="{{ $question->name }}" placeholder="手机号11 位" value="{{ old($question->name) }}">
                             <br>
                             (抽奖使用)
                         </p>

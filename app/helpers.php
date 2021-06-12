@@ -5,6 +5,8 @@ function route_class()
     return str_replace('.', '-', Route::currentRouteName());
 }
 
+
+
 // function question_type($name){
 //     switch ($name)
 //         {

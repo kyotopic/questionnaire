@@ -20,6 +20,10 @@ class PagesController extends Controller
     }
 
     public function store(Request $request){
+
+        $value = request()->cookie();
+        dd($value);
+
         $this->validate($request, [
             'gender' => 'required',
             'age' => 'required',
@@ -37,20 +41,22 @@ class PagesController extends Controller
             'lacquer' => 'required|array|max:3',
             'interest' => 'required',
             'budget' => 'required',
-            'price9' => 'required',
-            'price10' => 'required',
-            'price11' => 'required',
-            'price12' => 'required',
-            'price13' => 'required',
-            'price14' => 'required',
             'user_name' => 'required',
             'phone' => 'required|unique:user_infos|regex:/^[0-9]+$/',
         ]);
+
+
 
         $user_id = UserInfo::create([
             'user_name' => $request->user_name,
             'phone' => $request->phone,
         ])->id;
+
+
+
+
+
+
         AnswersList::create([
             'user_info_id' => $user_id,
             'gender' => (int)$request->gender,
@@ -75,6 +81,10 @@ class PagesController extends Controller
             'price12' => (int)$request->price12,
             'price13' => (int)$request->price13,
             'price14' => (int)$request->price14,
+            'question_6' => $request->question_6,
+            'question_7' => $request->question_7,
+            'question_8' => $request->question_8,
+
         ]);
 
 

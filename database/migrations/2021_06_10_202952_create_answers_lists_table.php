@@ -32,12 +32,12 @@ class CreateAnswersListsTable extends Migration
             $table->json('lacquer');
             $table->integer('interest');
             $table->integer('budget');
-            $table->integer('price9');
-            $table->integer('price10');
-            $table->integer('price11');
-            $table->integer('price12');
-            $table->integer('price13');
-            $table->integer('price14');
+            $table->json('price9');
+            $table->json('price10');
+            $table->json('price11');
+            $table->json('price12');
+            $table->json('price13');
+            $table->json('price14');
             $table->string('question_6')->nullable();
             $table->string('question_7')->nullable();
             $table->string('question_8')->nullable();
