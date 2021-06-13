@@ -15,7 +15,7 @@ class CreateAnswersListsTable extends Migration
     {
         Schema::create('answers_lists', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_info_id')->index();
+            $table->integer('userinfo_id')->index();
             $table->integer('gender');
             $table->integer('age');
             $table->integer('residence');
@@ -32,12 +32,8 @@ class CreateAnswersListsTable extends Migration
             $table->json('lacquer');
             $table->integer('interest');
             $table->integer('budget');
-            $table->json('price9');
-            $table->json('price10');
-            $table->json('price11');
-            $table->json('price12');
-            $table->json('price13');
-            $table->json('price14');
+            $table->json('answer_ids');
+            $table->json('priceforquestion_ids');
             $table->string('question_6')->nullable();
             $table->string('question_7')->nullable();
             $table->string('question_8')->nullable();

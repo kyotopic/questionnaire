@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Userinfo;
 
 class AnswersList extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'user_info_id',
+        'userinfo_id',
         'gender',
         'age',
         'residence',
@@ -27,18 +28,14 @@ class AnswersList extends Model
         'lacquer',
         'interest',
         'budget',
-        'price9',
-        'price10',
-        'price11',
-        'price12',
-        'price13',
-        'price14',
+        'answer_ids',
+        'priceforquestion_ids',
         'question_6',
         'question_7',
         'question_8',
     ];
 
-    public function userinfos(){
-        return $this->hasMany(AnswerList::class);
+    public function userinfo(){
+        return $this->belongsTo(Userinfo::class);
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Question;
-use App\Models\UserInfo;
+use App\Models\Userinfo;
 use App\Models\AnswersList;
 
 class PagesController extends Controller
@@ -21,8 +21,6 @@ class PagesController extends Controller
 
     public function store(Request $request){
 
-        $value = request()->cookie();
-        dd($value);
 
         $this->validate($request, [
             'gender' => 'required',
@@ -46,9 +44,105 @@ class PagesController extends Controller
         ]);
 
 
+        $answer_ids = array();
+        $price_ids = array();
+        $i = 0;
+        $j = 0;
+        if(request()->cookie('coffee_cup0')){
+            $coffee_array = explode(",",request()->cookie('coffee_cup0'));
+            $answer_ids[$i++] = $coffee_array[0];
+            $price_ids[$j++] = $coffee_array[1];
+        }
+        if(request()->cookie('coffee_cup1')){
+            $array = explode(",",request()->cookie('coffee_cup1'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('coffee_cup2')){
+            $array = explode(",",request()->cookie('coffee_cup2'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('teapot0')){
+            $array = explode(",",request()->cookie('teapot0'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('teapot1')){
+            $array = explode(",",request()->cookie('teapot1'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('teapot2')){
+            $array = explode(",",request()->cookie('teapot2'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('ceramic_cup0')){
+            $array = explode(",",request()->cookie('ceramic_cup0'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('ceramic_cup1')){
+            $array = explode(",",request()->cookie('ceramic_cup1'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('ceramic_cup2')){
+            $array = explode(",",request()->cookie('ceramic_cup2'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('silver_product0')){
+            $array = explode(",",request()->cookie('silver_product0'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('silver_product1')){
+            $array = explode(",",request()->cookie('silver_product1'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('silver_product2')){
+            $array = explode(",",request()->cookie('silver_product2'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('textile0')){
+            $array = explode(",",request()->cookie('textile0'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('textile1')){
+            $array = explode(",",request()->cookie('textile1'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('textile2')){
+            $array = explode(",",request()->cookie('textile2'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('lacquer0')){
+            $array = explode(",",request()->cookie('lacquer0'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('lacquer1')){
+            $array = explode(",",request()->cookie('lacquer1'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+        if(request()->cookie('lacquer2')){
+            $array = explode(",",request()->cookie('lacquer2'));
+            $answer_ids[$i++] = $array[0];
+            $price_ids[$j++] = $array[1];
+        }
+
+
 
         $user_id = UserInfo::create([
-            'user_name' => $request->user_name,
+            'name' => $request->user_name,
             'phone' => $request->phone,
         ])->id;
 
@@ -58,7 +152,7 @@ class PagesController extends Controller
 
 
         AnswersList::create([
-            'user_info_id' => $user_id,
+            'userinfo_id' => $user_id,
             'gender' => (int)$request->gender,
             'age' => (int)$request->age,
             'residence' => (int)$request->residence,
@@ -75,12 +169,8 @@ class PagesController extends Controller
             'lacquer' => json_encode($request->lacquer),
             'interest' => (int)$request->interest,
             'budget' => (int)$request->budget,
-            'price9' => (int)$request->price9,
-            'price10' => (int)$request->price10,
-            'price11' => (int)$request->price11,
-            'price12' => (int)$request->price12,
-            'price13' => (int)$request->price13,
-            'price14' => (int)$request->price14,
+            'answer_ids' => json_encode($answer_ids),
+            'priceforquestion_ids' => json_encode($price_ids),
             'question_6' => $request->question_6,
             'question_7' => $request->question_7,
             'question_8' => $request->question_8,
@@ -89,6 +179,12 @@ class PagesController extends Controller
 
 
         return redirect()->route('feedback')->with('success', '您的问卷已成功提交！');
+    }
+
+    public function show()
+    {
+        $answer_lists = AnswersList::all();
+        return view('pages.show', compact('answer_lists'));
     }
 }
 
